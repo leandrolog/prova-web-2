@@ -25,6 +25,7 @@ public class SecurityConfig {
                         authorizeConfig -> {
                             authorizeConfig.requestMatchers(HttpMethod.GET,"/todos").permitAll();
                             authorizeConfig.requestMatchers(HttpMethod.POST,"/add").permitAll();
+                            authorizeConfig.requestMatchers(HttpMethod.GET,"/swagger-ui").permitAll();
                             authorizeConfig.requestMatchers(HttpMethod.POST,"/login").permitAll();
                             authorizeConfig.requestMatchers(HttpMethod.POST,"/usuario/add").permitAll();
                         }
